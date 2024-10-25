@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: ClientAPI
+        uri: lb://CLIENTAPI
+        predicates:
+        - Path=/**
+      
+        
+  application:
+    name: CLOUD-API-GATEWAY          
+server:
+  port: 3333          
+          
